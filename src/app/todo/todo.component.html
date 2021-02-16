@@ -1,0 +1,25 @@
+<section class="main-section">
+    <header>
+        <h1>To Do List</h1>
+    </header>
+
+    <ul class="task-section">
+        <li *ngFor="let Todo of todos; index as i" class="each-task">
+            <button class="complete-btn" *ngIf="!Todo.isComplete">Complete</button>
+            <p [ngClass]="{'complete': Todo.isComplete}">Task: {{Todo.task}}</p>
+            <p [ngClass]="{'complete': Todo.isComplete}">Completed: {{Todo.isComplete}}</p>
+            <button (click)="deleteTask(i)">X</button>
+        </li>
+    </ul>
+
+    <form #addForm="ngForm" (ngSubmit)="addTask(addForm)">
+        <label for="taskname">Task</label>
+        <input type="text" name="taskname" id="taskname" ngModel>
+        <p>Is Complete</p>
+        <label for="yes">True</label>
+        <input type="radio" name="complete" id="yes" value="yes" ngModel />
+        <label for="no">False</label>
+        <input type="radio" name="complete" id="no" value="no" ngModel />
+        <button class="add-btn">Add Task</button>
+    </form>
+</section>

@@ -1,0 +1,35 @@
+.complete{
+    text-decoration: line-through;
+}
+.main-section {
+     position: relative;
+     align-items: center;
+     
+    
+}
+.task-section{
+display: flex;
+position: relative;
+flex-direction: column;
+background-color: #eee;
+width: 40vw;
+height: 60vh;
+text-align: justify;
+}
+.each-task{
+    border: 1px solid black;
+    display: flex; 
+    list-style: none;
+    align-items: center;
+justify-content: center;
+}
+.complete-btn{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    color: #ff69b4;
+    border: 1px solid #ff69b4;
+}
+.add-btn{
+    background-color: #ff1493;
+color:#eee}
